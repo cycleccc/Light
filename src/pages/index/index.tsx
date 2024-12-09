@@ -1,20 +1,20 @@
-import { View, Text } from '@tarojs/components';
-import { AtButton } from 'taro-ui';
+import { View } from '@tarojs/components';
+import CategoryIcons from '@/components/category-icons';
+import CategoryTags from '@/components/category-tags';
+import ContentMasonry from '@/components/content-masonry';
+import Search from '@/components/Search';
 
 export default function Index() {
   return (
-    // <View className="index">
-    <View className="text-[#acc855] text-[100px]">
-      <Text>Hello world!</Text>
-      <AtButton type="primary">I need Taro UI</AtButton>
-      <Text>Taro UI 支持 Vue 了吗？</Text>
-      <AtButton type="primary" circle>
-        支持
-      </AtButton>
-      <Text>共建？</Text>
-      <AtButton type="secondary" circle>
-        来
-      </AtButton>
+    <View className="flex flex-col min-h-screen bg-gray-50">
+      <View className="fixed top-0 left-0 right-0 z-50 bg-white">
+        <Search />
+        <CategoryIcons />
+        <CategoryTags />
+      </View>
+      <View className="mt-[168px]">
+        <ContentMasonry />
+      </View>
     </View>
   );
 }
