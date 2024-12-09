@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "belt-miniprogram-taro",
-  "description": "皮带管家--用户端",
+  "projectname": "Light-miniprogram-taro",
+  "description": "Light--用户端",
   "appid": "wxd21426e2495a5215",
   "setting": {
     "urlCheck": true,

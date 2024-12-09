@@ -1,4 +1,5 @@
 import path from 'path';
+import { UnifiedWebpackPluginV5 } from 'weapp-tailwindcss/webpack';
 
 const config = {
   projectName: 'belt-miniprogram-taro3',
@@ -24,6 +25,22 @@ const config = {
   },
 
   mini: {
+    webpackChain(chain, _webpack) {
+      chain.merge({
+        plugin: {
+          install: {
+            plugin: UnifiedWebpackPluginV5,
+            args: [
+              {
+                appType: 'taro',
+                // 下面个配置，会开启 rem -> rpx 的转化
+                rem2rpx: true,
+              },
+            ],
+          },
+        },
+      });
+    },
     postcss: {
       pxtransform: {
         enable: true,

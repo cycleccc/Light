@@ -11,14 +11,14 @@ import { useRequest } from '@/src/hooks/useRequest';
 import { accountSignIn } from '@/src/api';
 
 const Mine: React.FC = () => {
-  const { run: login, loading } = useRequest(
-    (param) => accountSignIn({ ...param }),
-    {
-      onSuccess(data, params) {
-        console.log(data);
-      },
-    },
-  );
+  // const { run: login, loading } = useRequest(
+  //   (param) => accountSignIn({ ...param }),
+  //   {
+  //     onSuccess(data, params) {
+  //       console.log(data);
+  //     },
+  //   },
+  // );
   // 可以使用所有的 React Hooks
   useEffect(() => {}, []);
 
@@ -38,7 +38,7 @@ const Mine: React.FC = () => {
   return (
     <View>
       我的
-      <AtButton
+      {/* <AtButton
         loading={loading}
         onClick={() => {
           login({
@@ -48,7 +48,7 @@ const Mine: React.FC = () => {
         }}
       >
         登录接口测试
-      </AtButton>
+      </AtButton> */}
     </View>
   );
 };

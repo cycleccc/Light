@@ -1,6 +1,6 @@
 import { Component, PropsWithChildren } from 'react';
 import 'taro-ui/dist/style/components/button.scss'; // 按需引入
-import './app.less';
+import './app.scss';
 
 class App extends Component<PropsWithChildren> {
   componentDidMount() {}

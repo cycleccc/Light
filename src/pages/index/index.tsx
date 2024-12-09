@@ -1,11 +1,10 @@
 import { View, Text } from '@tarojs/components';
 import { AtButton } from 'taro-ui';
 
-import './index.less';
-
 export default function Index() {
   return (
-    <View className="index">
+    // <View className="index">
+    <View className="text-[#acc855] text-[100px]">
       <Text>Hello world!</Text>
       <AtButton type="primary">I need Taro UI</AtButton>
       <Text>Taro UI 支持 Vue 了吗？</Text>
