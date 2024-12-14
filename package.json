@@ -62,7 +62,6 @@
     "prettier": "^3.2.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "taro-react-echarts": "^1.2.2",
     "taro-ui": "^3.2.1"
   },
   "devDependencies": {
