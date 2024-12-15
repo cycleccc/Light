@@ -1,34 +1,38 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "composite": true,
+    "skipLibCheck": true,
     "module": "ESNext",
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "lib",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictNullChecks": true,
-    "sourceMap": true,
-    "baseUrl": "./",
-    "rootDir": ".",
-    "jsx": "react-jsx",
-    "allowJs": true,
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "typeRoots": ["node_modules/@types"],
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "baseUrl": ".",
     "paths": {
-      "@/src/*": ["./src/*"],
-      "@/api/*": ["./src/api/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/assets/*": ["./src/assets/*"]
-    }
+      "@/*": ["./src/*"]
+    },
+    "outDir": "dist",
+    "lib": ["esnext", "dom"],
+    "types": [
+      "@dcloudio/types",
+      "@uni-helper/uni-types",
+      "@types/wechat-miniprogram",
+      "wot-design-uni/global.d.ts"
+    ]
   },
-  "include": ["src/**/*", "config/**/*"],
-  "exclude": ["node_modules", "dist", "docs"],
-  "compileOnSave": false,
-  "skipLibCheck": true
+  "vueCompilerOptions": {
+    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.vue",
+    "src/**/*.json"
+  ]
 }

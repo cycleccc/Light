@@ -1,89 +1,86 @@
-# Taro3+React+Echarts项目模板
+<p align="center">
+  <a href="https://github.com/feige996/unibest">
+    <img width="160" src="./src/static/logo.svg">
+  </a>
+</p>
 
-这个项目使用 Taro3 + Taro-ui + TypeScript ，把官方案例踩的一些坑都解决了，并且封装了请求、图表等进去，配置了提交规范和代码检查，开箱即用，如果你希望使用React快速开始一个小程序项目，可以直接来用，直接塞页面进去就好。
+<h1 align="center">
+  <a href="https://github.com/feige996/unibest" target="_blank">unibest - 最好的 uniapp 开发框架</a>
+</h1>
 
-- [图表库使用 taro-react-echarts](https://taro-ext.jd.com/plugin/view/62d610ef53a8a975043e7f2c)
-- [踩的部分坑记录](https://www.yuque.com/quehei/499/aq6i1ocd4g0m1f0z)
+<div align="center">
+旧仓库 codercup 进不去了，star 也拿不回来，这里也展示一下那个地址的 star.
 
-## 快速开始
+[![GitHub Repo stars](https://img.shields.io/github/stars/codercup/unibest?style=flat&logo=github)](https://github.com/codercup/unibest)
+[![GitHub forks](https://img.shields.io/github/forks/codercup/unibest?style=flat&logo=github)](https://github.com/codercup/unibest)
 
-```bash
-# 安装依赖
-$ yarn
-# 运行
-$ yarn dev:weapp
-# 打包
-$ yarn build:weapp
-```
+</div>
 
-## 注意
+<div align="center">
 
+[![GitHub Repo stars](https://img.shields.io/github/stars/feige996/unibest?style=flat&logo=github)](https://github.com/feige996/unibest)
+[![GitHub forks](https://img.shields.io/github/forks/feige996/unibest?style=flat&logo=github)](https://github.com/feige996/unibest)
+[![star](https://gitee.com/feige996/unibest/badge/star.svg?theme=dark)](https://gitee.com/feige996/unibest/stargazers)
+[![fork](https://gitee.com/feige996/unibest/badge/fork.svg?theme=dark)](https://gitee.com/feige996/unibest/members)
+![node version](https://img.shields.io/badge/node-%3E%3D18-green)
+![pnpm version](https://img.shields.io/badge/pnpm-%3E%3D7.30-green)
+![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/feige996/unibest)
+![GitHub License](https://img.shields.io/github/license/feige996/unibest)
 
-1. 页面分享设置
+</div>
 
-```
-  useShareAppMessage(() => {
-    // 使用时，必须为页面配置 enableShareAppMessage: true。（修改配置文件后请重新编译项目）
-    return {
-      path: SHARE.SHARE_PATH,
-      title: SHARE.SHARE_Title,
-      imageUrl: SHARE.SHARE_URL
-    }
-  })
+`unibest` —— 最好的 `uniapp` 开发模板，由 `uniapp` + `Vue3` + `Ts` + `Vite5` + `UnoCss` + `wot-ui` + `z-paging` 构成，使用了最新的前端技术栈，无需依靠 `HBuilderX`，通过命令行方式运行 `web`、`小程序` 和 `App`（编辑器推荐 `VSCode`，可选 `webstorm`）。
 
-```
-## 相关资源一览
+`unibest` 内置了 `约定式路由`、`layout布局`、`请求封装`、`请求拦截`、`登录拦截`、`UnoCSS`、`i18n多语言` 等基础功能，提供了 `代码提示`、`自动格式化`、`统一配置`、`代码片段` 等辅助功能，让你编写 `uniapp` 拥有 `best` 体验 （ `unibest 的由来`）。
 
-- [相关功能文档地址](https://...)
-- [接口文档地址](http://...)
-- [设计稿-移动端](https://...)
+![](https://raw.githubusercontent.com/andreasbm/readme/master/screenshots/lines/rainbow.png)
 
-## 约定
+<p align="center">
+  <a href="https://unibest.tech/" target="_blank">📖 文档地址(new)</a>
+  <span style="margin:0 10px;">|</span>
+  <a href="https://feige996.github.io/hello-unibest/" target="_blank">📱 DEMO 地址</a>
+</p>
 
-1. 命名风格
+---
 
-- hooks：`camelCase` 风格，并以 `use` 开头。例如： `useGetGlobalConfig`
-- 常量： `SCREAMINGSNAKE_CASE` 风格。例如：`DATE_FORMAT`
+注意旧的地址 [codercup](https://github.com/codercup/unibest) 我进不去了，使用新的 [feige996](https://github.com/feige996/unibest)。PR和 issue 也请使用新地址，否则无法合并。
 
-1. 注释请遵循 [JSDoc](https://jsdoc.app/) | [中文文档](http://shouce.jb51.net/jsdoc/index.html)
+## ⚙️ 环境
 
-## 开发流程
+- node>=18
+- pnpm>=7.30
+- Vue Official>=2.1.10
+- TypeScript>=5.0
 
-功能开发或修复请切到相关分支，然后提 Pull Request 到 dev 分支。
+## &#x1F4C2; 快速开始
 
-### 分支名格式
+执行 `pnpm create unibest` 创建项目
 
-#### 功能开发
+执行 `pnpm i` 安装依赖
 
-feat/版本/功能名（或任务 ID）
+执行 `pnpm dev` 运行 `H5`
 
-```
-feat/gzx/xxx
-```
+## 📦 运行（支持热更新）
 
-#### 修复 bug
+- web平台： `pnpm dev:h5`, 然后打开 [http://localhost:9000/](http://localhost:9000/)。
+- weixin平台：`pnpm dev:mp-weixin` 然后打开微信开发者工具，导入本地文件夹，选择本项目的`dist/dev/mp-weixin` 文件。
+- APP平台：`pnpm dev:app`, 然后打开 `HBuilderX`，导入刚刚生成的`dist/dev/app` 文件夹，选择运行到模拟器(开发时优先使用)，或者运行的安卓/ios基座。
 
-fix/bug 号（或 bug 内容）
+## 🔗 发布
 
-```
-fix/xxx
-```
+- web平台： `pnpm build:h5`，打包后的文件在 `dist/build/h5`，可以放到web服务器，如nginx运行。如果最终不是放在根目录，可以在 `manifest.config.ts` 文件的 `h5.router.base` 属性进行修改。
+- weixin平台：`pnpm build:mp-weixin`, 打包后的文件在 `dist/build/mp-weixin`，然后通过微信开发者工具导入，并点击右上角的“上传”按钮进行上传。
+- APP平台：`pnpm build:app`, 然后打开 `HBuilderX`，导入刚刚生成的`dist/build/app` 文件夹，选择发行 - APP云打包。
 
-### 检出分支
+## 📄 License
 
-你可以执行下面的命令检出一个分支
+[MIT](https://opensource.org/license/mit/)
 
-```
-git checkout -B feat/xxx
-```
+Copyright (c) 2024 菲鸽
 
-### 其他
+## 捐赠
 
-1. 请使用 `git cz` 或者 `gcz` 提交代码。本项目遵循 [cz-conventional-changelog](https://www.npmjs.com/package/cz-conventional-changelog) 提交规范。示例：
-
-```
-# 修复bug fix: bug内容
-fix: 修复了一个致命的bug
-# feature feat: 任务内容
-feat: 增加了一个新功能
-```
+<p align='center'>
+<img alt="special sponsor appwrite" src="./screenshots/pay-1.png" height="330" style="display:inline-block; height:330px;">
+<img alt="special sponsor appwrite" src="./screenshots/pay-2.png" height="330" style="display:inline-block; height:330px; margin-left:10px;">
+</p>
